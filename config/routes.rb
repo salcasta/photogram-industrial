@@ -3,14 +3,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :likes
-  resources :follow_requests
   resources :comments
+  resources :follow_requests
+  resources :likes
   resources :photos
-  resources :users, only: :show
-  
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get ":username/liked" => "users#liked", as: :liked
+
+  get ":username" => "users#show", as: :user
 end
