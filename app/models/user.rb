@@ -47,7 +47,7 @@ class User < ApplicationRecord
 
   has_many :followers, through: :accepted_received_follow_requests, source: :sender
 
-  has_many :feed, through: :leaders, source: :own_photoa
+  has_many :feed, through: :leaders, source: :own_photos
 
   has_many :discover, through: :leaders, source: :liked_photos
 
