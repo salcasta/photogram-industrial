@@ -24,10 +24,6 @@
   </div>
 </div>
 
-<ul>
-  <% current_user.own_photos.each do |photo| %>
-    <li>
-      <%= render "photos/photo", photo: photo %>
-    </li>
-  <% end %>
-</ul>
+<% @user.followers.each do |follower| %>
+  <%= render "users/follow", follower: follower %>
+<% end %>
