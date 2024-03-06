@@ -69,7 +69,7 @@ task sample_data: :environment do
 
         if rand < 0.25
           photo.comments.create(
-            body: Faker::Movies::StarWars.quote,
+            body: Faker::Movies::BackToTheFuture.quote,
             author: follower
           )
         end

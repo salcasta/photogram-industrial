@@ -1,0 +1,5 @@
+<%= render partial: "users/tab_header" %>
+
+<% @user.leaders.each do |leader| %>
+  <%= render "users/follow", follower: leader %>
+<% end %>
